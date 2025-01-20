@@ -1,16 +1,22 @@
 // odkazy na HTML objekty
-let figurky = document.getElementById("figurky");
-let pocetPat = document.getElementById("pocetPat");
-let pocetMat = document.getElementById("pocetMat");
+const figurky = document.getElementById("figurky");
+const pocetPat = document.getElementById("pocetPat");
+const pocetMat = document.getElementById("pocetMat");
 
 // kód vykreslení obrázků
-let pat = "<img src='img/pat.png'>";
+const pat = "<img src='img/pat.png'>";
+const mat = "<img src='img/mat.png'>";
 
 let kodFigurek = "";
 let i=0;
 while (i<10) {
   i++;
   kodFigurek += "<div>" + pat + "</div>";
+}
+
+while (i<10) {
+  i++;
+  kodFigurek += "<div>" + mat + "</div>";
 }
 figurky.innerHTML = kodFigurek; // vloží kód řady obrázků, kterou požadujeme vykreslit
 pocetPat.innerText = i;         // vypíše počet vykreslených figurek Pata (všech deset)
